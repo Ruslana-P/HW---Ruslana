@@ -1,21 +1,14 @@
-let divFigure = document.querySelector('.figure');
-let initialClass = divFigure.getAttribute('class');
-let selected = document.querySelector('#figures');
+let divFigure = document.querySelector('#figure');
+let selectedFigure = document.querySelector('#figures');
 let buttonColor = document.querySelector('#button_color');
 
-selected.addEventListener('change', function() {
-    divFigure.setAttribute('class', initialClass + ' ' + selected.value);
-    console.log(selected.value);
+selectedFigure.addEventListener('change', function() {
+    divFigure.setAttribute('class', selectedFigure.value);
 })
 
-buttonColor.addEventListener( 'click', function () {
-    document.querySelectorAll('input[name="choose_color"]').forEach( function (element) {
-    let newColor
-    if (element.checked) {
-        newColor = element.value;
-        }
-    divFigure.style.backgroundColor = newColor;
-    }
-)})
+buttonColor.addEventListener('click', function() {
+    let selectedColor = document.querySelector('#choose_color');
+    divFigure.style.backgroundColor = selectedColor.value;
+})
 
 

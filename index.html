@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <div class="figure"></div>
+    <div id="figure" class="square"></div>
     <div>
     <h2> Please select the figure </h2>
     <label for="figures">Choose figure</label>
@@ -15,15 +15,11 @@
         <option value="rectangle">Rectangle</option>
     </select>
     </div>
+    <br>
 
     <div class="color">
-    <h2> Please choose the color </h2>
-    <input type="radio" id="red" name="choose_color" value="red">
-    <label for="red"> Red </label> <br>
-    <input type="radio" id="blue" name="choose_color" value="blue">
-    <label for="blue"> Blue </label><br>
-    <input type="radio" id="green" name="choose_color" value="green">
-    <label for="green">Green</label><br>
+        <label for="choose_color"></label>
+        <input type='color' id="choose_color" name="choose_color" value="#000000" >
     <button id="button_color"> Choose color</button>
     </div>
 
